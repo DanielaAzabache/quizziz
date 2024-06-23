@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derecho de Familia España</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #3700b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #3700b3;
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div style="width:100%;display:flex;flex-direction:column;gap:8px;min-height:635px;"><iframe src="https://quizizz.com/embed/quiz/666fb0da0619b549cb7a06cb" title="Derecho de Familia - Quizizz" style="flex:1;" frameBorder="0" allowfullscreen></iframe><a href="https://quizizz.com/admin?source=embedFrame" target="_blank"></a></div>
+
+    
+    <!-- Botón para iniciar o pausar la música -->
+    <button id="play-pause-button" onclick="togglePlayPause()">Play Music</button>
+
+    <!-- Reproductor de audio oculto -->
+    <audio id="background-music" src="musica.mp3" loop></audio>
+
+    <script>
+        let isPlaying = false;
+
+        function togglePlayPause() {
+            const audio = document.getElementById('background-music');
+            const button = document.getElementById('play-pause-button');
+            if (isPlaying) {
+                audio.pause();
+                button.textContent = 'Play';
+            } else {
+                audio.currentTime = 10; // Especifica el segundo desde el cual debe empezar la reproducción
+                audio.volume = 0.5;  // Ajusta el volumen aquí (0.0 a 1.0)
+                audio.play();
+                button.textContent = 'Pause';
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>
